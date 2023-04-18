@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ - Flavors of India</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/faq.css" />
+     </head>
+  <body>
+	<nav class="navbar">
+		<div class="container">
+		  <div class="nav">
+			<img src="./images/logo.png" alt="" class="nav-logo" />
+			<div class="nav-links">
+			  <a href="/" class="nav-link">Home</a>
+			  <% if (isAuth) { %>
+			  <a href="/orderHistory" class="nav-link active">Order History</a>
+			  <%} %>
+			  <a href="/menu" class="nav-link">Menu</a>
+			  <a href="/faq" class="nav-link">FAQ</a>
+			  <a href="/reservation" class="nav-link active">Reservation</a>
+			  <% if (!isAuth) { %>
+			  <a href="/login" class="nav-link">Login</a>
+			  <%} else { %>
+			  <a href="/api/logout" class="nav-link">Logout</a>
+			  <% } %>
+			</div>
+		  </div>
+		</div>
+	  </nav>
+
+    <div class="container">
+      <main class="main">
+       	<h1>Frequently Asked Questions</h1>
+
+	<ul class="faq-list">
+		<li>
+			<div class="question">Do you take reservations?</div>
+			<div class="answer">
+				<p>Yes, we do take reservations. Please call the restaurant to book a reservation using the contact list provided 				   in the home page.</p>
+			</div>
+		</li>
+		<li>
+			<div class="question">Are you open on holidays?</div>
+			<div class="answer">
+				<p>We are closed on federally recognized holidays.</p>
+			</div>
+		</li>
+		<li>
+			<div class="question">Do you have vegetarian, vegan, or gluten free options?</div>
+			<div class="answer">
+				<p>Yes, we do! Check out the menu for what is available.</p>
+			</div>
+		</li>
+		<li>
+			<div class="question">What forms of payment do you accept?</div>
+			<div class="answer">
+				<p>We accept all major credit cards and PayPal.</p>
+			</div>
+		</li>
+		<li>
+			<div class="question">What if there is a mistake in my order?</div>
+			<div class="answer">
+				<p>We are sorry if you didn't receive what you ordered. Please contact the restaurant so that the correct items 					   may be delivered.</p>
+			</div>
+		</li>
+		<li>
+			<div class="question">What are the restaurant operating hours?</div>
+			<div class="answer">
+				<p>We open at 10 am and close at 11 pm.</p>
+			</div>
+		</li>
+		<li>
+			<div class="question">Is there parking nearby?</div>
+			<div class="answer">
+				<p>Yes, we have parking space near the restaurant.</p>
+			</div>
+		</li>
+		<li>
+			<div class="question">Is the delivery free?</div>
+			<div class="answer">
+				<p>Yes, delivery is free for orders over $50.</p>
+			</div>
+		</li>
+		<li>
+			<div class="question">Is there a dress code policy?</div>
+			<div class="answer">
+				<p>No, there is no dress code policy. We just ask that you dress appropriately.</p>
+			</div>
+		</li>
+		<li>
+			<div class="question">How long does the delivery take?</div>
+			<div class="answer">
+				<p>It depends on the address the order is being delivered to. However, we aim to deliver within 30 minutes.</p>
+			</div>
+		</li>
+	</ul>
+	<div class="footer">
+        <p>@2023 Flavors of India, all rights reserved ©.</p>
+      </div>
+      </main>
+    </div>
+    <script src="./js/faq.js"></script>
+  </body>
+</html>
